@@ -16,7 +16,19 @@ var FavoritosListComponent = (function () {
     //La inicializamos con el constructor
     function FavoritosListComponent() {
         this.title = 'Listado de marcadores';
+        this.favoritos = ['oscarrc.me', 'youtube.com', 'twitter.com'];
+        this.favoritosVisibles = false;
     }
+    //Creamos los métodos para mostrar u ocultar los favoritos
+    FavoritosListComponent.prototype.showFavoritos = function () {
+        this.favoritosVisibles = true;
+    };
+    FavoritosListComponent.prototype.hideFavoritos = function () {
+        this.favoritosVisibles = false;
+    };
+    FavoritosListComponent.prototype.changeColor = function () {
+        this.color = "red";
+    };
     return FavoritosListComponent;
 }());
 FavoritosListComponent = __decorate([

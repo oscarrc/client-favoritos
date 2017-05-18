@@ -1,1 +1,23 @@
 <strong>{{title}}</strong>
+<!-- Añadimos un estilo con un atributo -->
+<div class="container" [style.background]="color">
+    <!-- Evento change -->
+    <!-- Cambiar color <input type="text" (change)="changeColor()"/> -->
+    
+    <!-- Two way data binding -->
+    <input type="text" [(ngModel)] = "color" />
+    
+    <!-- Mediante el evento clic se lanzará showFavoritos al hacer clic en el botón -->
+    <!-- Además esté botón se mostrará sólo cuando favoritosVisibles sea falso -->
+    <button (click)="showFavoritos()" 
+            *ngIf="favoritosVisibles == false">Mostrar Favoritos</button>
+    
+    <!-- Creamos el mismo botón a la inversa -->
+    <button (click)="hideFavoritos()" 
+            *ngIf="favoritosVisibles == true">Ocultar Favoritos</button>
+    <!--Utilizamos ngIf-->
+    <ul id="favoritos" *ngIf="favoritosVisibles == true">
+        <!-- Utilizamos la directiva NgFor para recorrer el array -->
+        <li *ngFor="let favorito of favoritos">{{favorito}}</li>
+    </ul>
+</div>

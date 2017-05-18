@@ -10,6 +10,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
+//Importamos el FormsModule
+var forms_1 = require("@angular/forms");
 //Importamos el componente favoritos-list
 var favoritos_list_component_1 = require("./components/favoritos-list.component");
 var AppModule = (function () {
@@ -19,7 +21,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
         //Añadimos el componente en declarations
         declarations: [
             app_component_1.AppComponent,
