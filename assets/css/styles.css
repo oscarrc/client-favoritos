@@ -1,0 +1,15 @@
+body{
+    background: #eee;
+}
+
+.bordeNegro{
+    border: 2px solid black;
+}
+
+.bordeVerde{
+    border: 2px solid green;
+}
+
+.fondoAmarillo{
+    background: yellow;
+}
